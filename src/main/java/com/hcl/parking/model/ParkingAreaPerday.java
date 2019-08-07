@@ -1,5 +1,7 @@
 package com.hcl.parking.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +17,7 @@ public class ParkingAreaPerday {
 	private Long ParkedByArea;
 	private String parkingStatus;
 	private String parkedPerson;
+	private Date todaydate;
 	
 	public ParkingAreaPerday(Long parkedId, Long parkedByArea, String parkingStatus, String parkedPerson) {
 		super();
@@ -28,6 +31,15 @@ public class ParkingAreaPerday {
 		super();
 	}
 	
+	
+	public Date getTodaydate() {
+		return todaydate;
+	}
+
+	public void setTodaydate(Date todaydate) {
+		this.todaydate = todaydate;
+	}
+
 	public Long getParkedId() {
 		return parkedId;
 	}
