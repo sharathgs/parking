@@ -27,8 +27,8 @@ public class AutomaticSlot {
 	@Autowired
 	ParkDayRepository pdayRepository;
 	
-	//@Scheduled(cron = "0 0 0 * * *")
-	@Scheduled(fixedDelay = 10000)
+	@Scheduled(cron = "0 0 0 * * *")
+	//@Scheduled(fixedDelay = 10000)
 	   public void fixedRateSch() {
 		
 		List<Employee> employeeDetails = employeeRepository.findAll();
